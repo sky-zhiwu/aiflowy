@@ -576,7 +576,7 @@ const AntdCrud = forwardRef(function AntdCrud<T>({
             </Space>
 
             <div ref={tableRef}>
-                <Table columns={tableColumns}
+                <Table<any> columns={tableColumns}
                        dataSource={dataSource}
                        rowKey="id"
                        expandable={{
