@@ -42,3 +42,6 @@ build/
 .jlsp/
 .arts/
 luceneKnowledge
+
+# v2
+/aiflowy-ui-admin
