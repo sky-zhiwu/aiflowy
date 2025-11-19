@@ -100,7 +100,7 @@ const CardPage: React.FC<CardPageProps> = forwardRef(({
 
     const [urlParams, setUrlParams] = useUrlParams();
     const pageNumber = +(urlParams.pageNumber || ((result?.data) as Page<any>)?.pageNumber || 1)
-    let pageSize = +(urlParams.pageSize || ((result?.data) as Page<any>)?.pageSize || defaultPageSize)
+    const pageSize: number = +(urlParams.pageSize || ((result?.data) as Page<any>)?.pageSize || defaultPageSize)
 
     const [localPageSize, setLocalPageSize] = useState(
         +(urlParams.pageSize || ((result?.data) as Page<any>)?.pageSize || defaultPageSize)
@@ -212,7 +212,7 @@ const CardPage: React.FC<CardPageProps> = forwardRef(({
                       tableAlias={tableAlias}
                       open={isEditOpen}
                       columnsConfig={columnsConfig}
-                      onRefresh={() => doGet()}
+                      onRefresh={() => doGet({params: {pageNumber: 1, pageSize: defaultPageSize}})}
                       data={editData}
                       onSubmit={closeEdit}
                       onCancel={closeEdit}
