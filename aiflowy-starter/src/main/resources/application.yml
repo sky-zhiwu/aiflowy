@@ -16,7 +16,7 @@ spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/aiflowy?useInformationSchema=true&characterEncoding=utf-8
     username: root
-    password: 123456
+    password: 12345
   servlet:
     multipart:
       max-file-size: 100MB
@@ -24,7 +24,7 @@ spring:
   web:
     resources:
       # 示例：windows【file: C:\aiflowy\attachment】 linux【file: /www/aiflowy/attachment】
-      static-locations: file:C:\aiflowy\attachment
+      static-locations: file:D:\zws\Projects\aiflowy\attachment
 #      static-locations: file:/Users/michael/Desktop/test
   mvc:
     static-path-pattern: /static/**
@@ -65,7 +65,7 @@ aiflowy:
       prefix: attachment
     local:
       # 示例：windows【C:\aiflowy\attachment】 linux【/www/aiflowy/attachment】
-      root: 'C:\aiflowy\attachment'
+      root: 'D:\zws\Projects\aiflowy\attachment'
 #      root: /Users/michael/Desktop/test
       # 后端接口地址
       prefix: 'http://localhost:8080/static'
